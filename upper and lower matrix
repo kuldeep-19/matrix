@@ -1,0 +1,47 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+ int row,col,r,c,a[10][10];
+ clrscr();
+ printf("enter the row and col");
+ scanf("%d%d",&row,&col);
+ printf("\n");
+ printf("enter the elment");
+ for(r=0; r<row; r++) {
+ for (c=0; c<col; c++){
+	scanf("%d", &a[r][c]);
+ }}
+ printf("elment of matrix");
+ printf("\n");
+ for(r=0; r<row; r++) {
+ for (c=0; c<col; c++){
+	printf("%d\t", a[r][c]);
+ } printf("\n");
+ }
+ printf("upper trangular of matrix");
+ for(r=0; r<row; r++){
+ printf("\n");
+ for(c=0; c<col; c++){
+	 if(r>c)
+	 {
+	 printf("0");
+	 printf("\t");
+	 }
+	 else { printf("%d\t",a[r][c]); }
+ }}      printf("\n");
+  printf("lower trangular of matrix");
+ for(r=0; r<row; r++){
+ printf("\n");
+ for(c=0; c<col; c++){
+	 if(r>=c)
+	 {
+	 printf("%d\t",a[r][c]);
+	 }
+	 else {
+	 printf("0\t");
+
+	  }
+ }}
+ getch();
+}
